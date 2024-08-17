@@ -14,13 +14,9 @@
 
 function combine(objA, objB) {
   let sum = 0;
-  for (let key in objA) {
-      sum += objA[key];
-  }
-  for (let key in objB) {
-      sum += objB[key];
+  for (ley keys in combine)
   }
   return sum
 }
 
-console.log(combine({ a: 10, b: 20, c: 30 }, { a: 3, c: 6, d: 3 }))
+console.log(combine({ a: 10, b: 20, c: 3 }, { a: 3, c: 6, d: 3 }))
