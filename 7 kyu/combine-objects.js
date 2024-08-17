@@ -12,11 +12,34 @@
 
 // SOLUTION
 
-function combine(objA, objB) {
-  let sum = 0;
-  for (ley keys in combine)
-  }
-  return sum
-}
+// function combine(objA, objB, objC) {
+//   let sum = {}
+//   for (let key in objA){
+//     sum[key] = objA[key];
+//   }
+//   for (let key in objB){
+//     sum[key] = (sum[key] || 0) + objB[key];
+//   }
+//   for (let key in objC){
+//     sum[key] = (sum[key] || 0) + objB[key];
+//   }
+//   return sum
+// }
 
-console.log(combine({ a: 10, b: 20, c: 3 }, { a: 3, c: 6, d: 3 }))
+//   const result = combine({ a: 10, b: 20, c: 3 }, { a: 3, c: 6, d: 3 }, {a: 2, b:1, c:1});
+//   console.log(result);
+
+
+function combine(...objects) { 
+  let mergedObj = {}; 
+ 
+  objects.forEach(obj => { 
+    Object 
+    .keys(obj) 
+    .forEach(key => { 
+      mergedObj[key] = (mergedObj[key] || 0) + obj[key]; 
+    });
+  }); 
+ 
+  return mergedObj; 
+} 
