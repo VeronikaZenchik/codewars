@@ -18,26 +18,7 @@
 // SOLUTION:
 
 function countSheeps(sheep) {
-    if(!sheep === true) {
-      return false
-    }
-      return true
-
+    return sheep.filter(Boolean).length
   }
-console.log(countSheeps([true,  true,  true,  false,
-  true,  true,  true,  true ,
-  true,  false, true,  false,
-  true,  false, false, true ,
-  true,  true,  true,  true ,
-  false, false, true,  true]));
-
-  // function predicate(num) {
-  //   if (num >= 5) {
-  //     return true
-  //   }
-  
-  //   return false
-  // }
-  
-  // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(countSheeps([undefined,null,false,true,true,false,null,undefined]));
 
