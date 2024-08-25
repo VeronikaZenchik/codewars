@@ -10,3 +10,11 @@ function addProperty(obj, prop, value) {
     obj[prop] = value;
 }
 }
+
+function addProperty(obj, prop, value) {
+  if(prop in obj){
+    throw new Error('Error message')
+  } else {
+    obj[prop] = value;
+}
+}
