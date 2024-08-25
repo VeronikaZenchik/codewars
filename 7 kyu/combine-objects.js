@@ -13,10 +13,6 @@
 // SOLUTION
 
 
-
-
-
-
 function combine(...arr) { // когда не знаем какое количесвто может прийти объектов
   const result = {}
   for(let i = 0; i < arr.length; i++){
