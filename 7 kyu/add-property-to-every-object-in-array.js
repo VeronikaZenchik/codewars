@@ -28,13 +28,16 @@ let questions = [{
 }];
 
 
-questions.forEach(function(question){
-  question.usersAnswer = null;
-})
-console.log(questions);
-
-
 
 for(let i = 0; i < questions.length; i++) {
   questions[i].usersAnswer = null;
 }
+
+
+// questions.forEach(function(question){
+//   question.usersAnswer = null;
+// })
+// console.log(questions);
+
+
+
