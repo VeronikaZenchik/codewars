@@ -12,34 +12,23 @@
 
 // SOLUTION
 
-// function combine(objA, objB, objC) {
-//   let sum = {}
-//   for (let key in objA){
-//     sum[key] = objA[key];
-//   }
-//   for (let key in objB){
-//     sum[key] = (sum[key] || 0) + objB[key];
-//   }
-//   for (let key in objC){
-//     sum[key] = (sum[key] || 0) + objB[key];
-//   }
-//   return sum
-// }
-
-//   const result = combine({ a: 10, b: 20, c: 3 }, { a: 3, c: 6, d: 3 }, {a: 2, b:1, c:1});
-//   console.log(result);
 
 
-function combine(...objects) { 
-  let mergedObj = {}; 
- 
-  objects.forEach(obj => { 
-    Object 
-    .keys(obj) 
-    .forEach(key => { 
-      mergedObj[key] = (mergedObj[key] || 0) + obj[key]; 
-    });
-  }); 
- 
-  return mergedObj; 
-} 
+
+
+
+function combine(...arr) { // когда не знаем какое количесвто может прийти объектов
+  const result = {}
+  for(let i = 0; i < arr.length; i++){
+    const keys = Object.keys(result) // даст массив ключей в объекте
+    for(key in arr[i]){
+        if(keys.includes(key)){
+          result[key] = result[key] + arr[i][key]
+        } else {
+          result[key] = arr[i][key]
+        }
+    }
+  }
+  return result
+}
+console.log(result);

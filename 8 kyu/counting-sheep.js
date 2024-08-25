@@ -22,3 +22,14 @@ function countSheeps(sheep) {
   }
 console.log(countSheeps([undefined,null,false,true,true,false,null,undefined]));
 
+function countSheeps(arrayOfSheep) {
+  // TODO May the force be with you
+  var num = 0;
+  
+  for(var i = 0; i < arrayOfSheep.length; i++)
+    if(arrayOfSheep[i] == true)
+      num++;
+      
+  return num;
+}
+
