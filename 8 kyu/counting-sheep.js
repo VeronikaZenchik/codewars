@@ -22,12 +22,14 @@
 //   }
 // console.log(countSheeps([undefined,null,false,true,true,false,null,undefined]));
 
+
+
 function countSheeps(arrayOfSheep) {
-  let num = 0;
+  let num = 0; //наш счетчик овец
   for(let i = 0; i < arrayOfSheep.length; i++)
     if(arrayOfSheep[i] == true)
-      num++;
+      num++; // увеличение счетчика если нашли овцу
   return num;
 }
-console.log(countSheeps([undefined,null,false,true,true,false,null,undefined]));
+console.log(countSheeps([true, false, true, true, false, true]));
 
