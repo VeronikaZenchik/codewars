@@ -40,26 +40,43 @@
 
 
 const whoOnline = [{
-    username: 'David',
-    status: 'online',
-    lastActivity: 10
-  }, {
-    username: 'Lucy', 
-    status: 'offline',
-    lastActivity: 22
-  }, {
-    username: 'Bob', 
-    status: 'online',
-    lastActivity: 104
-  }]
+  username: 'Lucy',
+  status: 'offline',
+  lastActivity: 22
+}, {
+  username: 'Bob',
+  status: 'online',
+  lastActivity: 104
+}]
 
   function getOnline(users) {
-    const onlineUsers = [];
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].status === 'online') {
-            onlineUsers.push(users[i].username);
-        }
+    const result = {
+      online: [],
+      offline: [],
+      away: []
     }
-    return onlineUsers;
+    if (users.length === 0) { //  если массив пуст, возвращаем пустой объект
+      return {}; 
   }
-console.log(getOnline(whoOnline));
+    for (let i = 0; i < users.length; i++) { // перебираем наш массив
+      if (users[i].status === 'online') { // если онлайн статус, то падаем в след 
+        if (users[i].lastActivity <= 10) { // если меньше 10 минут то пушаем в онлайн
+          result.online.push(users[i].username);
+        } else {
+          result.away.push(users[i].username); // если меньшу то в авэй
+        }
+      } else if (users[i].status === 'offline') { // если у нас оффлайн то пушаем в оффлайн
+        result.offline.push(users[i].username);
+      }
+    };
+
+    if (result.online.length === 0) {
+      delete result.online;
+    } else if (result.offline.length === 0){
+      delete result.offline;
+    } else {
+      delete result.away;
+    }
+    return result // выводим резульатт
+  }
+  console.log(getOnline(whoOnline));
