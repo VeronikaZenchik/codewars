@@ -39,7 +39,7 @@
 // SOLUTION:
 
 
-const whoOnline = [{
+const friends = [{
   username: 'Lucy',
   status: 'offline',
   lastActivity: 22
@@ -49,34 +49,42 @@ const whoOnline = [{
   lastActivity: 104
 }]
 
-  function getOnline(users) {
+const whosOnline = (friends) => {
     const result = {
       online: [],
       offline: [],
       away: []
     }
-    if (users.length === 0) { //  если массив пуст, возвращаем пустой объект
+    if (friends.length === 0) { //  если массив пуст, возвращаем пустой объект
       return {}; 
   }
-    for (let i = 0; i < users.length; i++) { // перебираем наш массив
-      if (users[i].status === 'online') { // если онлайн статус, то падаем в след 
-        if (users[i].lastActivity <= 10) { // если меньше 10 минут то пушаем в онлайн
-          result.online.push(users[i].username);
+    for (let i = 0; i < friends.length; i++) { // перебираем наш массив
+      if (friends[i].status === 'online') { // если онлайн статус, то падаем в след 
+        if (friends[i].lastActivity <= 10) { // если меньше 10 минут то пушаем в онлайн
+          result.online.push(friends[i].username);
         } else {
-          result.away.push(users[i].username); // если меньшу то в авэй
+          result.away.push(friends[i].username); // если меньшу то в авэй
         }
-      } else if (users[i].status === 'offline') { // если у нас оффлайн то пушаем в оффлайн
-        result.offline.push(users[i].username);
+      } else if (friends[i].status === 'offline') { // если у нас оффлайн то пушаем в оффлайн
+        result.offline.push(friends[i].username);
       }
     };
 
     if (result.online.length === 0) {
       delete result.online;
-    } else if (result.offline.length === 0){
+    } 
+    if (result.offline.length === 0){
       delete result.offline;
-    } else {
+    } 
+    if (result.away.length === 0) {
       delete result.away;
     }
     return result // выводим резульатт
   }
-  console.log(getOnline(whoOnline));
+  console.log(whosOnline(friends));
+
+
+
+
+  // **Некорректная логика удаления пустых массивов**: Ваша текущая логика удаления пустых массивов приводит к тому, что одно из свойств будет удалено даже в случае, если все массивы имеют значения. Рекомендуется проверить поверхность каждого свойства отдельно без использования `else if`.
+// это если использовать if else

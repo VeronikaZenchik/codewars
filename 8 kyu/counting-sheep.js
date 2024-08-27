@@ -18,7 +18,7 @@
 // SOLUTION:
 
 // function countSheeps(sheep) {
-//     return sheep.filter(Boolean).length
+//     return sheep.filter(Boolean).length //  Boolean: Когда вы передаете `Boolean` в метод `filter`, он будет вызываться для каждого элемента массива. Если элемент «истинный» , он будет добавлен в новый массив. Если элемент «ложный», он не будет добавлен.
 //   }
 // console.log(countSheeps([undefined,null,false,true,true,false,null,undefined]));
 
