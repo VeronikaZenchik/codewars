@@ -9,10 +9,9 @@
 // "1405" --> 1405
 // "-7" --> -7
 
-
+// SOLUTION:
 
 const stringToNumber = function(str){
-  // put your code here
   return Number(str);
 }
 
