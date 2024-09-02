@@ -4,6 +4,9 @@
 // 6, "I"     -> "IIIIII"
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
+// SOLUTION
+
+
 function repeatStr (n, s) {
   return s.repeat(n)
 }
