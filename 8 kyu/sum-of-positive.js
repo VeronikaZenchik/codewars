@@ -4,6 +4,9 @@
 
 // Note: if there is nothing to sum, the sum is default to 0.
 
+
+// SOLUTION:
+
 function positiveSum(arr) {
   let sum = 0;
   for(let i = 0; i < arr.length; i++) {
