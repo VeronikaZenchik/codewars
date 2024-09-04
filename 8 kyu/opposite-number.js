@@ -10,7 +10,8 @@
 // SOLUTION:
 
 function opposite(number) {
-  return -number
+  return -number 
+  // return number * (-1) //Умножаем число на -1, чтобы получить его противоположное значение
   };
 
 
