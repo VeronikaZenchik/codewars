@@ -6,16 +6,22 @@
 
 //SOLUTION:
 
-function check(a, x) {
-  for (let i = 0; i < a.length; i++) {
-    if(a[i] === x){
-      return true
-    }
-  }
-  return false
+// function check(a, x) {
+//   for (let i = 0; i < a.length; i++) {
+//     if(a[i] === x){
+//       return true
+//     }
+//   }
+//   return false
+// }
+
+
+// через includes
+
+const check = (a, x) => {
+  return a.includes(x)
 }
 
 console.log(check([66, 101], 66));
 console.log(check(['t', 'e', 's', 't'], 'e'));
 console.log(check(['what', 'a', 'great', 'kata'], 'kat'));
-
