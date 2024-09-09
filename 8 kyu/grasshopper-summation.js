@@ -25,7 +25,7 @@ console.log(summation(8));
 //  return (num * (num + 1)) / 2; -- можно еще решить таким способом
 
 //let result = 0;
-// for (var i = 1; i <= num; i++) {
+// for (let i = 1; i <= num; i++) {
 //   result += i;
 // }
 
