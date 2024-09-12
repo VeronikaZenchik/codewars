@@ -11,9 +11,13 @@
 // SOLUTION:
 
 function descendingOrder(n){
-  const order = n.sort((a, b) =>  a - b)
+  const order = String(n) // сначала мы преобразуем наше число в строку
+  .split('') // затем разбиваем строку и массив
+  .map(Number) // преобразуем обтрано из строки в число
+  .sort((a, b) => b - a) // сортируем числа по убыванию
+  .join('') // соединяем
 
-  return order
+  return Number(order) // делаем обратно число
 }
 console.log(descendingOrder(111));
 console.log(descendingOrder(15));
