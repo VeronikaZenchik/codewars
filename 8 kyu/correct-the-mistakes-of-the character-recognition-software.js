@@ -28,3 +28,15 @@ const correct = (string) =>{
 console.log(correct("L0ND0N"));
 console.log(correct("DUBL1N"));
 console.log(correct("PAR15"));
+
+
+// function correctText(input) {
+//   const corrections = {
+//       '5': 'S',
+//       '0': 'O',
+//       '1': 'I'
+//   };
+  
+//   return input.split('').map(i => corrections[i] || i).join('');
+// }
+
