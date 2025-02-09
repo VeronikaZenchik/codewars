@@ -8,9 +8,8 @@
 // SOLUTION:
 
 const broken = (x) => {
-let array = x.split("")
-let result = []
-array.map((el) => {
+  let result = []
+x.split("").map((el) => {
   if(el === "1"){
     result.push("0")
   }
