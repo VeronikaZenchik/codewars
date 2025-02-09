@@ -25,3 +25,7 @@ const numbers = String(num).split("")
 console.log(squareDigits(3212));
 console.log(squareDigits(2112));
 
+
+// function squareDigits(num){
+//   return +num.toString().split('').map(i => i*i).join('');
+// }
