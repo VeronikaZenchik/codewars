@@ -20,3 +20,6 @@ for(let i = 0; i < n; i++){
 }
 
 console.log(oddCount(15));
+
+
+//  return Math.floor(n / 2); --- оптимизируем код
