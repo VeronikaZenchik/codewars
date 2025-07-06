@@ -14,7 +14,6 @@
 // SOLUTION:
 
 
-
 function arrayLeaders(numbers){
   let maxRight = []
   let rightSum = 0
